@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>4 Mathematical Operations v2</title>
+</head>
+<body>
+Enter the Number 1: <input type="number" id="x"><br>
+Enter the Number 2: <input type="number" id="y"><br><br>
+<button id="+" onclick="f4operations(this.id)">Sum</button>
+<button id="-" onclick="f4operations(this.id)">Subtraction</button>
+<button id="*" onclick="f4operations(this.id)">Multiplication</button>
+<button id="/" onclick="f4operations(this.id)">Division</button>
+<p id="result"></p>
+<script>
+function f4operations(b_id) {
+  var x, y, s, r;
+  //document.getElementById("button").innerHTML = b_id;
+  x = parseInt(document.getElementById("x").value);
+  y = parseInt(document.getElementById("y").value);
+  if (b_id == "+") {
+    s = x + y;
+    document.getElementById("result").innerHTML = "Sum = " + s;
+  }
+    if (b_id == "-") {
+    s = x - y;
+    document.getElementById("result").innerHTML = "Subtraction = " + s;
+  }
+  if (b_id == "*") {
+    s = x * y;
+    document.getElementById("result").innerHTML = "Multiplication = " + s;
+  }
+   if (b_id == "/") {
+      s = Math.trunc(x / y);
+      r = x % y;
+      document.getElementById("result").innerHTML = "Division: quotient = " + s + " remainder = " + r;
+  }
+}
+</script>
+</body>
+</html>
